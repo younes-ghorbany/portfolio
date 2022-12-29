@@ -65,7 +65,7 @@ const ShowCourses = ({ loading }) => {
                                     >
                                         <EllipsisText
                                             text={course.info}
-                                            length={"100"}
+                                            length={100}
                                         />
                                     </Typography>
                                 </CardContent>

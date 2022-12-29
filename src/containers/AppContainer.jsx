@@ -34,7 +34,13 @@ function AppContainer() {
     }, [isMdUp]);
 
     const handlePageNumber = (event, newPage) => {
+        console.log("Page Number Event:", event);
+        console.log("Page Number:", newPage);
         setPageNumber(newPage);
+    };
+
+    const handlePageChange = (index) => {
+        setPageNumber(index);
     };
 
     const handleThemeChange = () => {
@@ -59,7 +65,7 @@ function AppContainer() {
                 <PagesContainer>
                     <SwipeableViews
                         index={pageNumber}
-                        onChangeIndex={handlePageNumber}
+                        onChangeIndex={handlePageChange}
                     >
                         <Page pageNumber={pageNumber} index={0}>
                             <Home helmetTitle="وب سایت شخصی یونس قربانی" />
