@@ -15,7 +15,7 @@ import { devEdu } from "../../constants/details";
 const DevEduTimeline = ({ loading }) => {
     return (
         <Timeline position="right" sx={{ direction: "ltr" }}>
-            {devEdu.map((item, index) => (
+            {devEdu.map((item, index,array) => (
                 <Slide
                     key={index}
                     direction="up"
@@ -29,7 +29,7 @@ const DevEduTimeline = ({ loading }) => {
                             <TimelineDot color="info" variant="outlined">
                                 <SchoolRounded color="info" />
                             </TimelineDot>
-                            {index !== 3 ? <TimelineConnector /> : null}
+                            {index !== array.length - 1 ? <TimelineConnector /> : null}
                         </TimelineSeparator>
                         <TimelineContent>
                             <Typography variant="caption" color="gray">
