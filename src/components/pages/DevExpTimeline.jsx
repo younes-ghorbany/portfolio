@@ -15,7 +15,7 @@ import { devEdu } from "../../constants/details";
 const DevExpTimeline = ({ loading }) => {
     return (
         <Timeline position="right" sx={{ direction: "ltr" }}>
-            {devEdu.map((item, index) => (
+            {devEdu.map((item, index, array) => (
                 <Slide
                     key={index}
                     direction="up"
@@ -29,7 +29,7 @@ const DevExpTimeline = ({ loading }) => {
                             <TimelineDot color="warning" variant="outlined">
                                 <HomeRepairServiceRounded color="warning" />
                             </TimelineDot>
-                            {index !== 3 ? <TimelineConnector /> : null}
+                            {index !== array.length - 1 ? <TimelineConnector /> : null}
                         </TimelineSeparator>
                         <TimelineContent>
                             <Typography variant="caption" color="gray">
