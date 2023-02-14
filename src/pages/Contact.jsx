@@ -50,7 +50,7 @@ const Contact = ({ helmetTitle }) => {
                             transitionDelay: loading ? "200ms" : "0ms",
                         }}
                     >
-                        <Grid xs={12} sx={12} md={8}>
+                        <Grid xs={12} sm={12} md={8}>
                             <Card
                                 sx={{
                                     justifyContent: "center",
